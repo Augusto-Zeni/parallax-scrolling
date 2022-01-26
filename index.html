@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Parralax Scrolling</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="#" class="logo">Logo</a>
+                <div class="mobile-menu">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Work</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <img src="./img/stars.png" alt="stars" id="stars">
+            <img src="./img/moon.png" alt="moon" id="moon">
+            <img src="./img/mountains_behind.png" alt="mountains_behind" id="mountains_behind">
+            <h2 id="text">Moon Light</h2>
+            <a href="#sec" id="btn">Explore</a>
+            <img src="./img/mountains_front.png" alt="mountains_front" id="mountains_front">
+        </section>
+        <div class="sec" id="sec">
+            <h2>Parralax Scrolling Effects</h2>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores vitae delectus obcaecati et, illum, eos officiis voluptate tempora sapiente, nobis accusantium odit 
+                laborum non iure placeat nemo debitis nostrum odio! Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, atque? Vel itaque quo et dolorem eius id illo suscipit 
+                ad qui debitis nulla accusantium sit commodi exercitationem, tempora quibusdam iusto. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam dolorum at eaque atque. 
+                Temporibus maiores, non iste perferendis veniam, optio corrupti voluptas at animi doloribus beatae magni voluptatem atque libero! <br><br>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores vitae delectus obcaecati et, illum, eos officiis voluptate tempora sapiente, nobis accusantium odit 
+                laborum non iure placeat nemo debitis nostrum odio! Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, atque? Vel itaque quo et dolorem eius id illo suscipit 
+                ad qui debitis nulla accusantium sit commodi exercitationem, tempora quibusdam iusto. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam dolorum at eaque atque. 
+                Temporibus maiores, non iste perferendis veniam, optio corrupti voluptas at animi doloribus beatae magni voluptatem atque libero!<br><br>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores vitae delectus obcaecati et, illum, eos officiis voluptate tempora sapiente, nobis accusantium odit 
+                laborum non iure placeat nemo debitis nostrum odio! Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, atque? Vel itaque quo et dolorem eius id illo suscipit 
+                ad qui debitis nulla accusantium sit commodi exercitationem, tempora quibusdam iusto. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam dolorum at eaque atque. 
+                Temporibus maiores, non iste perferendis veniam, optio corrupti voluptas at animi doloribus beatae magni voluptatem atque libero!<br><br>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores vitae delectus obcaecati et, illum, eos officiis voluptate tempora sapiente, nobis accusantium odit 
+                laborum non iure placeat nemo debitis nostrum odio! Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, atque? Vel itaque quo et dolorem eius id illo suscipit 
+                ad qui debitis nulla accusantium sit commodi exercitationem, tempora quibusdam iusto. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam dolorum at eaque atque. 
+                Temporibus maiores, non iste perferendis veniam, optio corrupti voluptas at animi doloribus beatae magni voluptatem atque libero!
+            </p>
+        </div>
+
+        <script>
+            let stars = document.getElementById('stars');
+            let moon = document.getElementById('moon');
+            let mountains_behind = document.getElementById('mountains_behind');
+            let text = document.getElementById('text');
+            let btn = document.getElementById('btn');
+            let mountains_front = document.getElementById('mountains_front');
+            let header = document.querySelector('header');
+
+            window.addEventListener('scroll', function(){
+                let value = window.scrollY;
+                stars.style.left = value * 0.25 + 'px';
+                moon.style.top = value * 1.05 + 'px';
+                mountains_behind.style.top = value * 0.05 + 'px';
+                mountains_behind.style.top = value * 0.5 + 'px';
+                mountains_front.style.top = value * 0 + 'px';
+                text.style.marginRight = value * 4 + 'px';
+                text.style.marginTop = value * 1.5 + 'px';
+                btn.style.marginTop = value * 1.5 + 'px';
+                header.style.top = value * 0.5 + 'px';
+            })
+        </script>
+        <script src="mobile-navbar.js"></script>
+    </body>
+</html>
